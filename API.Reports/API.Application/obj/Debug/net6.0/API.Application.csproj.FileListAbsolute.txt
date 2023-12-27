@@ -1,0 +1,17 @@
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Application.deps.json
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Application.dll
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Application.pdb
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Infrastructure.dll
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Infrastructure.pdb
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\bin\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.csproj.AssemblyReference.cache
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.AssemblyInfoInputs.cache
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.AssemblyInfo.cs
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.csproj.CoreCompileInputs.cache
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.csproj.CopyComplete
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.dll
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\refint\API.Application.dll
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\API.Application.pdb
+C:\Users\ivan.machado\Desktop\API\API.Reports\API.Application\obj\Debug\net6.0\ref\API.Application.dll
