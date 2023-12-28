@@ -1,0 +1,61 @@
+# Archivos de configuración del IDE
+.vs/
+.vscode/
+
+# Archivos de compilación y binarios
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+*.nupkg
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.pdb
+*.exe
+*.dll
+*.snk
+
+# Carpetas de paquetes
+**/[Pp]ackages/
+**/[Pp]ackage[Ll]ock.json
+
+# Carpetas de salida de publicación
+**/[Ww]wwroot/
+**/[Aa]pp_data/
+**/[Nn]ode_modules/
+
+# Otros archivos y carpetas
+*.log
+*.log.*
+*.tmp
+*.tmp.*
+*.cache
+*.cache.*
+*.[Cc]ache
+*.[Cc]ache.*
+*.csproj.user
+*.sln.docstates
+*.DS_Store
+*.swp
+*._*
+*.bak
+*.bak.*
+*.swp
+*.swp.*
+*.dmp
+
+# Archivos generados por herramientas
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de bases de datos locales
+*.mdf
+*.ldf
+*.sqlite
+*.db
+*.jfm
+
+# Carpetas generadas por Visual Studio
+TestResults/
