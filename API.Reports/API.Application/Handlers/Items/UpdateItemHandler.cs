@@ -14,13 +14,12 @@ namespace API.Application.Handlers.Items
             _ItemRepository = ItemRepository;
         }
 
-        public async Task<ItemDTO> Handle(UpdateItemCommand request, CancellationToken cancellationToken)
+        public async Task<ItemDTO?> Handle(UpdateItemCommand request, CancellationToken cancellationToken)
         {
             var Item = await _ItemRepository.GetItemByIdAsync(request.Id, cancellationToken);
 
             if (Item == null)
             {
-                // Opcional: Manejar el caso de no encontrar la Itema
                 return null;
             }
 

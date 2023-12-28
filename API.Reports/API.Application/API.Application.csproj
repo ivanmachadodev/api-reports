@@ -16,4 +16,9 @@
     <ProjectReference Include="..\API.Infrastructure\API.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\DataSet\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
