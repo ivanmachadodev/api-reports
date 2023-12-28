@@ -1,42 +1,49 @@
 ﻿using API.Domain.Entities;
+using API.Infrastructure;
 using API.Infrastructure.Contracts;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-namespace API.Infrastructure.Repositories
+namespace API.Application.Services
 {
-    public class PersonRepository :IPersonRepository
+    public class PersonRepository : IPersonRepository
     {
-        public readonly ReportContext _context;
+        private readonly ReportContext _context;
+
         public PersonRepository(ReportContext context)
         {
             _context = context;
         }
-        public Person? GetPersonById(int id)
+
+        public async Task<Person?> GetPersonByIdAsync(int id, CancellationToken cancellationToken)
         {
-            return _context.Persons.Find(id);
+            return await _context.Persons.FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
         }
 
-        public void SavePerson(Person person)
+        public async Task<IEnumerable<Person>> GetAllPersonsAsync(CancellationToken cancellationToken)
         {
-            _context.Persons.Add(person);
-            _context.SaveChanges();
+            return await _context.Persons.ToListAsync(cancellationToken);
         }
 
-        public void EditPerson(Person person)
+        public async Task SavePersonAsync(Person person, CancellationToken cancellationToken)
+        {
+            await _context.Persons.AddAsync(person, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task UpdatePersonAsync(Person person, CancellationToken cancellationToken)
         {
             _context.Persons.Update(person);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public void DeletePerson(Person person)
+        public async Task DeletePersonAsync(int id, CancellationToken cancellationToken)
         {
-            _context.Persons.Remove(person);
-            _context.SaveChanges();
+            var person = await _context.Persons.FindAsync(new object[] { id }, cancellationToken);
+            if (person != null)
+            {
+                _context.Persons.Remove(person);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
         }
     }
 }
