@@ -1,4 +1,4 @@
-using API.Application.GrahpQL.Queries;
+using API.Application.GraphQL.Queries;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;

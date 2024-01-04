@@ -1,8 +1,12 @@
 ﻿using API.Domain.Entities;
 using API.Infrastructure.Contracts;
-using Microsoft.EntityFrameworkCore.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace API.Application.GrahpQL.Queries
+namespace API.Application.GraphQL.Queries
 {
     public class PersonQuery
     {
@@ -18,5 +22,6 @@ namespace API.Application.GrahpQL.Queries
                 return await personRepository.GetAllPersonsAsync();
             }
         }
+
     }
 }
