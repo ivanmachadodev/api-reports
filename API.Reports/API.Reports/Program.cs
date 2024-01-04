@@ -1,3 +1,4 @@
+using API.Application.GrahpQL.Queries;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
@@ -13,10 +14,12 @@ builder.Services.AddMediatR(assembly);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddGraphQLServer().AddQueryType<PersonQuery>();
 
 // Add scopeds
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+
 
 //DB Context
 builder.Services.AddDbContext<ReportContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ReportConnection")));
@@ -35,5 +38,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGraphQL("/graphql");
 
 app.Run();

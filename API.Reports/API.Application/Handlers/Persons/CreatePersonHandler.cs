@@ -21,7 +21,9 @@ namespace API.Application.Handlers.Persons
             var person = new Person
             {
                 Name = request.Name,
-                LastName = request.LastName
+                LastName = request.LastName,
+                Address = request.Address,
+                Age = request.Age,
             };
 
             await _personRepository.SavePersonAsync(person, cancellationToken);
@@ -30,7 +32,9 @@ namespace API.Application.Handlers.Persons
             {
                 Id = person.Id,
                 Name = person.Name,
-                LastName = person.LastName
+                LastName = person.LastName,
+                Address = person.Address,
+                Age= person.Age,
             };
         }
     }

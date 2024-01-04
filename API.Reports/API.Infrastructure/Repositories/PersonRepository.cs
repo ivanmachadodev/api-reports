@@ -14,14 +14,14 @@ namespace API.Application.Services
             _context = context;
         }
 
-        public async Task<Person?> GetPersonByIdAsync(int id, CancellationToken cancellationToken)
+        public async Task<Person?> GetPersonByIdAsync(int? id/*, CancellationToken cancellationToken*/)
         {
-            return await _context.Persons.FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
+            return await _context.Persons.FirstOrDefaultAsync(p => p.Id == id/*, cancellationToken*/);
         }
 
-        public async Task<IEnumerable<Person>> GetAllPersonsAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<Person>> GetAllPersonsAsync(/*CancellationToken cancellationToken*/)
         {
-            return await _context.Persons.ToListAsync(cancellationToken);
+            return await _context.Persons.ToListAsync(/*cancellationToken*/);
         }
 
         public async Task SavePersonAsync(Person person, CancellationToken cancellationToken)

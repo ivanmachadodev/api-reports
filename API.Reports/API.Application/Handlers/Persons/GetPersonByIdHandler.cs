@@ -18,7 +18,7 @@ namespace API.Application.Handlers.Persons
 
         public async Task<PersonDTO> Handle(GetPersonByIdQuery request, CancellationToken cancellationToken)
         {
-            var person = await _personRepository.GetPersonByIdAsync(request.id, cancellationToken);
+            var person = await _personRepository.GetPersonByIdAsync(request.id/*, cancellationToken*/);
 
             if (person == null)
             {

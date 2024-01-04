@@ -16,7 +16,7 @@ namespace API.Application.Handlers.Persons
 
         public async Task<IEnumerable<PersonDTO>> Handle(GetAllPersonsQuery request, CancellationToken cancellationToken)
         {
-            var persons = await _personRepository.GetAllPersonsAsync(cancellationToken);
+            var persons = await _personRepository.GetAllPersonsAsync(/*cancellationToken*/);
 
             // Convertir a DTOs
             var personDTOs = new List<PersonDTO>();
