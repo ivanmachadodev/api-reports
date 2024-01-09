@@ -1,9 +1,7 @@
-﻿using API.Application.Commands;
-using API.Application.Commands.Person;
+﻿using API.Application.Commands.Person;
 using API.Application.DTOs;
-using API.Application.Queries;
-using API.Application.Querys;
 using API.Application.Querys.Person;
+using API.Infrastructure.Contracts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,10 +12,12 @@ namespace API.Reports.Controllers
     public class PersonController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IPersonRepository _personRepository;
 
-        public PersonController(IMediator mediator)
+        public PersonController(IMediator mediator, IPersonRepository personRepository)
         {
             _mediator = mediator;
+            _personRepository = personRepository;
         }
 
         [HttpGet("{id}")]

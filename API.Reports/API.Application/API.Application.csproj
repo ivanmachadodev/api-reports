@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Commands\DataSet\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
