@@ -1,4 +1,4 @@
-using API.Application.GraphQL.Queries;
+using API.Application.Querys;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
@@ -9,16 +9,24 @@ var builder = WebApplication.CreateBuilder(args);
 var assembly = AppDomain.CurrentDomain.Load("API.Application");
 builder.Services.AddMediatR(assembly);
 
+builder.Services.AddHttpClient();
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddGraphQLServer().AddQueryType<PersonQuery>();
+builder.Services
+       .AddGraphQLServer()
+       .AddQueryType(d => d.Name("Query"))
+       .AddType<ItemsQuery>()
+       .AddType<PersonQuery>();
 
 // Add scopeds
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IMicroservice1Connection, Microservice1Connection>();
+builder.Services.AddScoped<IMicroservice2Connection, Microservice2Connection>();
 
 
 //DB Context
