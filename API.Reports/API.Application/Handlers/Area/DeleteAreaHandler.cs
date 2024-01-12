@@ -2,7 +2,7 @@
 using API.Infrastructure.Contracts;
 using MediatR;
 
-namespace API.Application.Handlers.Persons
+namespace API.Application.Handlers
 {
     public class DeleteAreaHandler : IRequestHandler<DeleteAreaCommand>
     {

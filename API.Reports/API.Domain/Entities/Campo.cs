@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace API.Domain.Entities
 {
-    public class Area
+    public class Campo
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int EntidadId { get; set; }
     }
 }

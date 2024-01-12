@@ -2,5 +2,5 @@
 
 namespace API.Application.Commands
 {
-    public record DeletePersonCommand(int Id) : IRequest;
+    public record DeleteAreaCommand(int Id) : IRequest;
 }

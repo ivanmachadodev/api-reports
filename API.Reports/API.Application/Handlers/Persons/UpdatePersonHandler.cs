@@ -1,4 +1,4 @@
-﻿using API.Application.Commands.Person;
+﻿using API.Application.Commands;
 using API.Application.DTOs;
 using API.Infrastructure.Contracts;
 using MediatR;
@@ -26,6 +26,8 @@ namespace API.Application.Handlers.Persons
 
             person.Name = request.Name;
             person.LastName = request.LastName;
+            person.Address = request.address;
+            person.Age = request.age;
 
             await _personRepository.UpdatePersonAsync(person, cancellationToken);
 
@@ -33,7 +35,9 @@ namespace API.Application.Handlers.Persons
             {
                 Id = person.Id,
                 Name = person.Name,
-                LastName = person.LastName
+                LastName = person.LastName,
+                Address = person.Address,
+                Age = person.Age
             };
         }
     }
