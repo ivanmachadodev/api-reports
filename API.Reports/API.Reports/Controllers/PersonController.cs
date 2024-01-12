@@ -1,9 +1,11 @@
-﻿using API.Application.Commands;
-using API.Application.Commands.Person;
+﻿using API.Application.Commands.Person;
 using API.Application.DTOs;
-using API.Application.Queries;
-using API.Application.Querys;
-using API.Application.Querys.Person;
+using API.Domain.Entities;
+using API.Infrastructure.Contracts;
+using HotChocolate;
+using HotChocolate.Execution;
+using HotChocolate.Execution.Processing;
+using HotChocolate.Language;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,39 +16,19 @@ namespace API.Reports.Controllers
     public class PersonController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IRequestExecutor _executor;
 
-        public PersonController(IMediator mediator)
+        public PersonController(IMediator mediator, IRequestExecutor executor)
         {
             _mediator = mediator;
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<PersonDTO>> GetById(int id)
-        {
-            var query = new GetPersonByIdQuery(id);
-            var person = await _mediator.Send(query);
-
-            if (person == null)
-            {
-                return NotFound();
-            }
-
-            return person;
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<PersonDTO>>> GetAll()
-        {
-            var query = new GetAllPersonsQuery();
-            var persons = await _mediator.Send(query);
-            return Ok(persons);
+            _executor = executor;
         }
 
         [HttpPost]
         public async Task<ActionResult<PersonDTO>> CreatePerson(CreatePersonCommand command)
         {
             var person = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetById), new { id = person.Id }, person);
+            return Ok(person);
         }
 
         [HttpPut("{id}")]
