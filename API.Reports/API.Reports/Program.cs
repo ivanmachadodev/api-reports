@@ -32,6 +32,15 @@ builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<IMicroservice1Connection, Microservice1Connection>();
 builder.Services.AddScoped<IMicroservice2Connection, Microservice2Connection>();
 
+//Add Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy",
+        policy => policy.WithOrigins("http://localhost:3000") // Reemplaza con la URL de tu app React
+                       .AllowAnyHeader()
+                       .AllowAnyMethod());
+});
+
 
 //DB Context
 builder.Services.AddDbContext<ReportContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ReportConnection")));
@@ -50,6 +59,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("MyCorsPolicy");
 
 app.MapGraphQL("/graphql");
 
