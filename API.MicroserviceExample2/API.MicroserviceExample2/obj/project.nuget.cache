@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lFrM1Jv+EtPy4QiAvBCFD5kTMLFiqgrXqac/Hu2jGCC2HA9hjdWlPPSkmLYEses+mGeyZij5W9/tRXel6jeOyA==",
+  "dgSpecHash": "nKIGvUMDs6FiC8z9nmV4NC+NXP2GPhpczj3dXqH2eAbS7NjxjTGh88JF3VSOpxAc3fyy50qwAa1PnozdoSjHDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
+  "projectFilePath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ivan.machado\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ivan.machado\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

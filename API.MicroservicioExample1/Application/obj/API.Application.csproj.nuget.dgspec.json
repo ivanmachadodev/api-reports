@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Application\\API.Application.csproj": {}
+    "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Application\\API.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Application\\API.Application.csproj": {
+    "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Application\\API.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Application\\API.Application.csproj",
+        "projectUniqueName": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Application\\API.Application.csproj",
         "projectName": "API.Application",
-        "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Application\\API.Application.csproj",
+        "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Application\\API.Application.csproj",
         "packagesPath": "C:\\Users\\ivan.machado\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Application\\obj\\",
+        "outputPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj"
+              "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\API.Domain.csproj": {
+    "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\API.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\API.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\API.Domain.csproj",
         "projectName": "API.Domain",
-        "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\API.Domain.csproj",
+        "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\API.Domain.csproj",
         "packagesPath": "C:\\Users\\ivan.machado\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -140,14 +140,14 @@
         }
       }
     },
-    "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj": {
+    "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj",
         "projectName": "API.Infrastructure",
-        "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\API.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ivan.machado\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,8 +170,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\API.Domain.csproj": {
-                "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\MicroservicioExample1\\Domain\\API.Domain.csproj"
+              "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroservicioExample1\\Domain\\API.Domain.csproj"
               }
             }
           }

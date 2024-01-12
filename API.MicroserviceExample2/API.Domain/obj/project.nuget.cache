@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H932h3uO4LgWK5Sz0cGAsllAKJSaqvKQlJ8rbqPoXPDE5scugmE/Uc3qh2v0ZcoLgkqZTvRT0rhd04O8rbZCrQ==",
+  "dgSpecHash": "BR6oBS1iP00vsPAG5+Z520tam/GjKBYI6vgyFMrKyMaZD26olJSSG3qgbnEfUu1Icgk1vYMx2EJRSQTPLBYnPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.Domain\\API.Domain.csproj",
+  "projectFilePath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.Domain\\API.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

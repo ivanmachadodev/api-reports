@@ -3462,11 +3462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
+      "projectUniqueName": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
       "projectName": "API.MicroserviceExample2",
-      "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
+      "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.MicroserviceExample2\\API.MicroserviceExample2.csproj",
       "packagesPath": "C:\\Users\\ivan.machado\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.MicroserviceExample2\\obj\\",
+      "outputPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.MicroserviceExample2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3489,8 +3489,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.Application\\API.Application.csproj": {
-              "projectPath": "C:\\Users\\ivan.machado\\Desktop\\API\\API.MicroserviceExample2\\API.Application\\API.Application.csproj"
+            "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.Application\\API.Application.csproj": {
+              "projectPath": "C:\\Users\\ivan.machado\\Documents\\GitHub\\api-reports\\API.MicroserviceExample2\\API.Application\\API.Application.csproj"
             }
           }
         }

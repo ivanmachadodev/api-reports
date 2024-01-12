@@ -4,7 +4,7 @@ using API.Infrastructure.Contracts;
 using HotChocolate;
 using HotChocolate.Types;
 
-namespace API.Reports.Queries
+namespace API.Reports.QueriesControllers
 {
     [ExtendObjectType("Query")]
     public class PersonQueryController

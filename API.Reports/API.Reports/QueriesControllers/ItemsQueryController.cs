@@ -6,7 +6,7 @@ using HotChocolate;
 namespace API.Reports.QueriesControllers
 {
     [ExtendObjectType("Query")]
-    public class ItemsQuery
+    public class ItemsQueryController
     {
         public async Task<IEnumerable<Item>> GetItems([Service] IMicroservice2Connection microservice2Connection, int? id)
         {
