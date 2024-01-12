@@ -1,8 +1,7 @@
-﻿using API.Application.Commands.Person;
+﻿using API.Application.Commands;
 using API.Application.DTOs;
-using API.Infrastructure.Contracts;
 using API.Domain.Entities;
-
+using API.Infrastructure.Contracts;
 using MediatR;
 
 namespace API.Application.Handlers.Persons

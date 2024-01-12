@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.Domain.Entities
+namespace API.Application.DTOs
 {
-    public class Area
+    public class EntidadDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int AreaID { get; set; }
     }
 }
