@@ -24,7 +24,7 @@ namespace API.Application.Handlers
                 Name = request.Name
             };
 
-            await _areaRepository.SavePersonAsync(area, cancellationToken);
+            await _areaRepository.SaveAreaAsync(area, cancellationToken);
 
             return new AreaDTO
             {

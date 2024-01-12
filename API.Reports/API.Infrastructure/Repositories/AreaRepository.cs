@@ -1,34 +1,37 @@
 ﻿using API.Domain.Entities;
 using API.Infrastructure.Contracts;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Infrastructure.Repositories
 {
     public class AreaRepository : IAreaRepository
     {
         private readonly ReportContext _context;
-        public AreaRepository(ReportContext context) 
+
+        public AreaRepository(ReportContext context)
         {
             _context = context;
         }
-        public Task DeletePersonAsync(int id, CancellationToken cancellationToken)
+
+        public async Task SaveAreaAsync(Area area, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _context.Areas.AddAsync(area, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public Task SavePersonAsync(Area area, CancellationToken cancellationToken)
+        public async Task UpdateAreaAsync(Area area, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _context.Areas.Update(area);
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public Task UpdatePersonAsync(Area area, CancellationToken cancellationToken)
+        public async Task DeleteAreaAsync(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var area = await _context.Areas.FindAsync(new object[] { id }, cancellationToken);
+            if (area != null)
+            {
+                _context.Areas.Remove(area);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
         }
     }
 }

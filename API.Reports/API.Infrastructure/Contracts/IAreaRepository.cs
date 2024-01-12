@@ -4,8 +4,8 @@ namespace API.Infrastructure.Contracts
 {
     public interface IAreaRepository
     {
-        Task SavePersonAsync(Area area, CancellationToken cancellationToken);
-        Task UpdatePersonAsync(Area area, CancellationToken cancellationToken);
-        Task DeletePersonAsync(int id, CancellationToken cancellationToken);
+        Task SaveAreaAsync(Area area, CancellationToken cancellationToken);
+        Task UpdateAreaAsync(Area area, CancellationToken cancellationToken);
+        Task DeleteAreaAsync(int id, CancellationToken cancellationToken);
     }
 }

@@ -2,6 +2,7 @@ using API.Application.Querys;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
+using API.Infrastructure.Repositories;
 using API.Reports.QueriesControllers;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ builder.Services
 // Add scopeds
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<IMicroservice1Connection, Microservice1Connection>();
 builder.Services.AddScoped<IMicroservice2Connection, Microservice2Connection>();
 
