@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Commands\DataSet\" />
+    <Folder Include="Querys\" />
   </ItemGroup>
 
 </Project>

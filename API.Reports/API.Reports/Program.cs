@@ -1,4 +1,3 @@
-using API.Application.Querys;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
@@ -21,11 +20,12 @@ builder.Services.AddSwaggerGen();
 builder.Services
        .AddGraphQLServer()
        .AddQueryType(d => d.Name("Query"))
+       .AddType<CamposDBsQueryController>()
        .AddType<ItemsQueryController>()
-       .AddType<PersonQueryController>()
-       .AddType<PersonQuery>();
+       .AddType<PersonQueryController>();
 
 // Add scopeds
+builder.Services.AddScoped<ICamposDBsRepository, CamposDBsRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();

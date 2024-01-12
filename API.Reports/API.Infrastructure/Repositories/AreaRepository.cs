@@ -1,5 +1,6 @@
 ﻿using API.Domain.Entities;
 using API.Infrastructure.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Infrastructure.Repositories
 {
@@ -10,6 +11,16 @@ namespace API.Infrastructure.Repositories
         public AreaRepository(ReportContext context)
         {
             _context = context;
+        }
+
+        public async Task<Area?> GetAreaByIdAsync(int? id)
+        {
+            return await _context.Areas.FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task<IEnumerable<Area>> GetAllAreasAsync()
+        {
+            return await _context.Areas.ToListAsync();
         }
 
         public async Task SaveAreaAsync(Area area, CancellationToken cancellationToken)
