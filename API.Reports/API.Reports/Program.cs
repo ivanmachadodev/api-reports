@@ -2,6 +2,7 @@ using API.Application.Querys;
 using API.Application.Services;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
+using API.Reports.Queries;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,7 @@ builder.Services
        .AddGraphQLServer()
        .AddQueryType(d => d.Name("Query"))
        .AddType<ItemsQuery>()
+       .AddType<PersonQueryController>()
        .AddType<PersonQuery>();
 
 // Add scopeds

@@ -1,6 +1,11 @@
 ﻿using API.Application.Commands.Person;
 using API.Application.DTOs;
+using API.Domain.Entities;
 using API.Infrastructure.Contracts;
+using HotChocolate;
+using HotChocolate.Execution;
+using HotChocolate.Execution.Processing;
+using HotChocolate.Language;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +16,12 @@ namespace API.Reports.Controllers
     public class PersonController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IRequestExecutor _executor;
 
-        public PersonController(IMediator mediator)
+        public PersonController(IMediator mediator, IRequestExecutor executor)
         {
             _mediator = mediator;
+            _executor = executor;
         }
 
         [HttpPost]

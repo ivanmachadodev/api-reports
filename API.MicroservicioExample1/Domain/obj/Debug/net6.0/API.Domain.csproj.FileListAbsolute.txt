@@ -1,0 +1,11 @@
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\bin\Debug\net6.0\API.Domain.deps.json
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\bin\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\bin\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.AssemblyInfoInputs.cache
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.AssemblyInfo.cs
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\refint\API.Domain.dll
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Desktop\API\MicroservicioExample1\Domain\obj\Debug\net6.0\ref\API.Domain.dll
