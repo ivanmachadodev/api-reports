@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Commands\DataSet\**" />
     <Compile Remove="Querys\**" />
+    <EmbeddedResource Remove="Commands\DataSet\**" />
     <EmbeddedResource Remove="Querys\**" />
+    <None Remove="Commands\DataSet\**" />
     <None Remove="Querys\**" />
   </ItemGroup>
 
@@ -22,8 +25,5 @@
     <ProjectReference Include="..\API.Infrastructure\API.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\DataSet\" />
-  </ItemGroup>
 
 </Project>
