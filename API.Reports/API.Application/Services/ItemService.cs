@@ -1,9 +1,10 @@
-﻿using API.Application.Services;
+﻿using API.Application.DTOs;
 using API.Domain.Entities;
+using MediatR;
 
-namespace API.Application
+namespace API.Application.Services
 {
-    public class ItemService
+    public class ItemService : IItemService, IRequest<IEnumerable<ItemDTO>>
     {
         private readonly IMicroservice2Connection _microservice2Connection;
 
@@ -12,12 +13,12 @@ namespace API.Application
             _microservice2Connection = microservice2Connection;
         }
 
-        public async Task<IEnumerable<Item>> GetItems(int? id)
+        public async Task<IEnumerable<ItemDTO>> GetItems(int? id)
         {
             if (id.HasValue)
             {
                 var item = await _microservice2Connection.GetItemMicroserviceByID(id.Value);
-                return item != null ? new List<Item> { item } : Enumerable.Empty<Item>();
+                return item != null ? new List<ItemDTO> { item } : Enumerable.Empty<ItemDTO>();
             }
             else
             {

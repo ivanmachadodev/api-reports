@@ -1,4 +1,5 @@
-﻿using API.Domain.Entities;
+﻿using API.Application.DTOs;
+using API.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,17 +19,17 @@ namespace API.Application.Services
             _httpClient.BaseAddress = new Uri("http://localhost:5300/api/");
         }
 
-        public async Task<Item> GetItemMicroserviceByID(int? id)
+        public async Task<ItemDTO> GetItemMicroserviceByID(int? id)
         {
             var response = await _httpClient.GetAsync("Item/" + id);
-            var item = await response.Content.ReadFromJsonAsync<Item>();
+            var item = await response.Content.ReadFromJsonAsync<ItemDTO>();
             return item;
         }
 
-        public async Task<IEnumerable<Item>> GetItemsMicroservice()
+        public async Task<IEnumerable<ItemDTO>> GetItemsMicroservice()
         {
             var response = await _httpClient.GetAsync("Item");
-            var items = await response.Content.ReadFromJsonAsync<List<Item>>();
+            var items = await response.Content.ReadFromJsonAsync<List<ItemDTO>>();
             return items;
         }
     }

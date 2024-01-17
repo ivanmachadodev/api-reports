@@ -15,7 +15,7 @@ namespace API.Infrastructure.Repositories
 
         public async Task<Area?> GetAreaByIdAsync(int? id)
         {
-            return await _context.Areas.FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Areas.FirstOrDefaultAsync(p => p.AreaId == id);
         }
 
         public async Task<IEnumerable<Area>> GetAllAreasAsync()

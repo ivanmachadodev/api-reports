@@ -1,22 +1,29 @@
-﻿using API.Application.Handlers.Items;
+﻿using API.Application.DTOs;
+using API.Application.Handlers.Items;
+using API.Application.Queries;
+using API.Application.Services;
 using API.Domain.Entities;
+using HotChocolate;
 using HotChocolate.Types;
+using MediatR;
 
 namespace API.Reports.QueriesControllers
 {
     [ExtendObjectType("Query")]
     public class ItemsQueryController
     {
-        private readonly GetItemsQueryHandler _getItemsQueryHandler;
+        private readonly IMediator _mediator;
 
-        public ItemsQueryController(GetItemsQueryHandler getItemsQueryHandler)
+        public ItemsQueryController(IMediator mediator)
         {
-            _getItemsQueryHandler = getItemsQueryHandler;
+            _mediator = mediator;
         }
-
-        public async Task<IEnumerable<Item>> GetItems(int? id)
+        public async Task<IEnumerable<ItemDTO>> GetItems([Service] IItemService itemservice, int? id)
         {
-            return await _getItemsQueryHandler.Handle(id);
+            //return await itemService.GetItems(id);
+            var query = new GetItemsQuery(itemservice, id);
+            var Items = await _mediator.Send(query);
+            return (IEnumerable<ItemDTO>)Items;
         }
     }
 }

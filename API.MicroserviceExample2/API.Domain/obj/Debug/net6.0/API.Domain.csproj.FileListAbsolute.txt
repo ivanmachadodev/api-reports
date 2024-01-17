@@ -9,3 +9,15 @@ C:\Users\ivan.machado\Desktop\API\API.MicroserviceExample2\API.Domain\obj\Debug\
 C:\Users\ivan.machado\Desktop\API\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\refint\API.Domain.dll
 C:\Users\ivan.machado\Desktop\API\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.pdb
 C:\Users\ivan.machado\Desktop\API\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\ref\API.Domain.dll
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\bin\Debug\net6.0\API.Domain.deps.json
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\bin\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\bin\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.AssemblyInfoInputs.cache
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.AssemblyInfo.cs
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.sourcelink.json
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\refint\API.Domain.dll
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Documents\GitHub\api-reports\API.MicroserviceExample2\API.Domain\obj\Debug\net6.0\ref\API.Domain.dll

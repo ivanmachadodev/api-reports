@@ -21,15 +21,15 @@ namespace API.Application.Handlers
         {
             var area = new Area
             {
-                Name = request.Name
+                Nombre = request.Name
             };
 
             await _areaRepository.SaveAreaAsync(area, cancellationToken);
 
             return new AreaDTO
             {
-                Id = area.Id,
-                Name = area.Name
+                Id = area.AreaId,
+                Name = area.Nombre
             };
         }
     }

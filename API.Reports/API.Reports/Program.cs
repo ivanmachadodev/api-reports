@@ -28,6 +28,7 @@ builder.Services
 builder.Services.AddScoped<ICamposDBsRepository, CamposDBsRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<IMicroservice1Connection, Microservice1Connection>();
 builder.Services.AddScoped<IMicroservice2Connection, Microservice2Connection>();

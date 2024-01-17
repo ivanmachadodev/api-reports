@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace API.Application.Services
 {
-    public interface IMicroservice2Connection
+    public interface IItemService
     {
-        Task<ItemDTO> GetItemMicroserviceByID(int? id);
-        Task<IEnumerable<ItemDTO>> GetItemsMicroservice();
+        Task<IEnumerable<ItemDTO>> GetItems(int? id);
     }
 }
