@@ -36,7 +36,7 @@ builder.Services.AddScoped<IMicroservice2Connection, Microservice2Connection>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyCorsPolicy",
-        policy => policy.WithOrigins("http://localhost:3000") // Reemplaza con la URL de tu app React
+        policy => policy.WithOrigins("http://localhost:3000")
                        .AllowAnyHeader()
                        .AllowAnyMethod());
 });

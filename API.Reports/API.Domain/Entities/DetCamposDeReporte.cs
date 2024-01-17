@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace API.Domain.Entities
 {
-    public class Campo
+    public class DetCamposDeReporte
     {
         [Key]
+        public int DetCamposDeReporteID { get; set; }
+        public int ReporteId { get; set; }
         public int CampoId { get; set; }
-        public string Nombre { get; set; }
-        public int EntidadId { get; set; }
+        public string TipoFiltro { get; set; }
+        public string Filtro { get; set; }
+        public string Orden { get; set; }
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace API.Domain.Entities
 {
-    public class DataSet
+    public class Agrupador
     {
         [Key]
-        public int DataSetId { get; set; }
-        public string Codigo { get; set; }
+        public string AgrupadorId { get; set; }
         public string Nombre { get; set; }
+        public int CampoId { get; set; }
     }
 }
