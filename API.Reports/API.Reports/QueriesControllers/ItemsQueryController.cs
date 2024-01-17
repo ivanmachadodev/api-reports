@@ -1,24 +1,22 @@
-﻿using API.Application.Services;
+﻿using API.Application.Handlers.Items;
 using API.Domain.Entities;
 using HotChocolate.Types;
-using HotChocolate;
 
 namespace API.Reports.QueriesControllers
 {
     [ExtendObjectType("Query")]
     public class ItemsQueryController
     {
-        public async Task<IEnumerable<Item>> GetItems([Service] IMicroservice2Connection microservice2Connection, int? id)
+        private readonly GetItemsQueryHandler _getItemsQueryHandler;
+
+        public ItemsQueryController(GetItemsQueryHandler getItemsQueryHandler)
         {
-            if (id.HasValue)
-            {
-                var item = await microservice2Connection.GetItemMicroserviceByID(id);
-                return item != null ? new List<Item> { item } : Enumerable.Empty<Item>();
-            }
-            else
-            {
-                return await microservice2Connection.GetItemsMicroservice();
-            }
+            _getItemsQueryHandler = getItemsQueryHandler;
+        }
+
+        public async Task<IEnumerable<Item>> GetItems(int? id)
+        {
+            return await _getItemsQueryHandler.Handle(id);
         }
     }
 }
