@@ -32,7 +32,7 @@ namespace API.ReportsEngine.QueriesControllers
             public string Order { get; set; }
         }
 
-        public Dataset CreateDataset([Service] ICamposDBsRepository datasetRepository, Dataset input)
+        public Dataset CreateDataset([Service] IDBFieldsBModelRepository datasetRepository, Dataset input)
         {
             var newDataset = new Dataset
             {

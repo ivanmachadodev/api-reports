@@ -20,13 +20,14 @@ builder.Services
        .AddQueryType(d => d.Name("Query"))
        .AddType<AreaQueryController>()
        .AddType<CamposDBsQueryController>()
+       .AddType<EntityQueryController>()
        .AddMutationType<DataSetMutationController>();
 
 //Add Scopeds
-builder.Services.AddScoped<ICamposDBsRepository, CamposDBsRepository>();
+builder.Services.AddScoped<IDBFieldsBModelRepository, CamposDBsRepository>();
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();
-builder.Services.AddScoped<IEntidadRepository, EntidadRepository>();
-builder.Services.AddScoped<ICampoRepository, CampoRepository>();
+builder.Services.AddScoped<IEntityRepository, EntityRepository>();
+builder.Services.AddScoped<IFieldRepository, FieldRepository>();
 
 //Add Cors
 builder.Services.AddCors(options =>

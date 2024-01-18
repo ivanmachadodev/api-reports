@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace API.Domain.Entities
 {
@@ -11,7 +6,9 @@ namespace API.Domain.Entities
     {
         [Key]
         public int DataSetId { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
+        public string Code { get; set; }
+        public string Name { get; set; }
+
+        public ICollection<DetFieldsOfDataSet> DetFieldsOfDataSets { get; set; }
     }
 }
