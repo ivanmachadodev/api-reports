@@ -2,5 +2,14 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
+/API.ReportsEngine/API.Domain/bin
 /API.ReportsEngine/API.Domain/obj
-/API.ReportsEngine/obj/*
+
+/API.ReportsEngine/API.Application/bin
+/API.ReportsEngine/API.Application/obj
+
+/API.ReportsEngine/API.Infrastructure/bin
+/API.ReportsEngine/API.Infrastructure/obj
+
+/API.ReportsEngine/API.ReportsEngine/bin
+/API.ReportsEngine/API.ReportsEngine/obj
