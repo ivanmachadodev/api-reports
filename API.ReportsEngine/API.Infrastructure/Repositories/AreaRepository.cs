@@ -1,20 +1,14 @@
 ﻿using API.Domain.Entities;
 using API.Infrastructure.Contracts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace API.Infrastructure.Repositories
 {
     public class AreaRepository : IAreaRepository
     {
-        private readonly ReportsEngineContext _context;
+        private readonly IReportsEngineContext _context;
 
-        public AreaRepository(ReportsEngineContext context)
+        public AreaRepository(IReportsEngineContext context)
         {
             _context = context;
         }

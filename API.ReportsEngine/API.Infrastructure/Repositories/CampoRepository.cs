@@ -1,52 +1,46 @@
 ﻿using API.Domain.Entities;
 using API.Infrastructure.Contracts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace API.Infrastructure.Repositories
 {
-    public class AreaRepository : IAreaRepository
+    public class CampoRepository : ICampoRepository
     {
         private readonly ReportsEngineContext _context;
 
-        public AreaRepository(ReportsEngineContext context)
+        public CampoRepository(ReportsEngineContext context)
         {
             _context = context;
         }
 
-        public async Task<Area?> GetAreaByIdAsync(int? id)
+        public async Task<Campo?> GetCampoByIdAsync(int? id)
         {
-            return await _context.Areas.FirstOrDefaultAsync(p => p.AreaId == id);
+            return await _context.Campos.FirstOrDefaultAsync(p => p.CampoId == id);
         }
 
-        public async Task<IEnumerable<Area>> GetAllAreasAsync()
+        public async Task<IEnumerable<Campo>> GetAllCamposAsync()
         {
-            return await _context.Areas.ToListAsync();
+            return await _context.Campos.ToListAsync();
         }
 
-        public async Task SaveAreaAsync(Area area, CancellationToken cancellationToken)
+        public async Task SaveCampoAsync(Campo campo, CancellationToken cancellationToken)
         {
-            await _context.Areas.AddAsync(area, cancellationToken);
+            await _context.Campos.AddAsync(campo, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task UpdateAreaAsync(Area area, CancellationToken cancellationToken)
+        public async Task UpdateCampoAsync(Campo campo, CancellationToken cancellationToken)
         {
-            _context.Areas.Update(area);
+            _context.Campos.Update(campo);
             await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task DeleteAreaAsync(int id, CancellationToken cancellationToken)
+        public async Task DeleteCampoAsync(int id, CancellationToken cancellationToken)
         {
-            var area = await _context.Areas.FindAsync(new object[] { id }, cancellationToken);
+            var area = await _context.Campos.FindAsync(new object[] { id }, cancellationToken);
             if (area != null)
             {
-                _context.Areas.Remove(area);
+                _context.Campos.Remove(area);
                 await _context.SaveChangesAsync(cancellationToken);
             }
         }
