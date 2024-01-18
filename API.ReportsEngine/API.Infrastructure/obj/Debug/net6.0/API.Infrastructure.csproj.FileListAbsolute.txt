@@ -1,0 +1,17 @@
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Infrastructure.deps.json
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Infrastructure.runtimeconfig.json
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Infrastructure.dll
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Infrastructure.pdb
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Domain.dll
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\bin\Debug\net6.0\API.Domain.pdb
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.AssemblyInfo.cs
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.csproj.CopyComplete
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.dll
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\refint\API.Infrastructure.dll
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.pdb
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\API.Infrastructure.genruntimeconfig.cache
+C:\Users\ivan.machado\Desktop\API\API.ReportsEngine\API.Infrastructure\obj\Debug\net6.0\ref\API.Infrastructure.dll
