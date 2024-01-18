@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Infrastructure.Repositories
 {
-    internal class CamposDBsRepository : ICamposDBsRepository
+    public class CamposDBsRepository : ICamposDBsRepository
     {
         private readonly IReportsEngineContext _context;
 
