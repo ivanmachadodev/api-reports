@@ -4,7 +4,6 @@ using API.Infrastructure.Repositories;
 using API.ReportsEngine.QueriesControllers;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Xml.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 var assembly = AppDomain.CurrentDomain.Load("API.Application");
@@ -23,6 +22,8 @@ builder.Services
 
 //Add Scopeds
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();
+builder.Services.AddScoped<IEntidadRepository, EntidadRepository>();
+builder.Services.AddScoped<ICampoRepository, CampoRepository>();
 
 //Add Cors
 builder.Services.AddCors(options =>
@@ -34,7 +35,7 @@ builder.Services.AddCors(options =>
 });
 
 //DB Context
-builder.Services.AddDbContext<ReportsEngineContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ReportsEngine")));
+builder.Services.AddDbContext<IReportsEngineContext, ReportsEngineContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ReportsEngine")));
 
 var app = builder.Build();
 
