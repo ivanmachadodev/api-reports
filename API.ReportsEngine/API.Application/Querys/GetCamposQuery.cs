@@ -3,5 +3,5 @@ using MediatR;
 
 namespace API.Application.Querys
 {
-    public record GetEntidadQuery(int? id) : IRequest<IEnumerator<EntidadDTO>>;
+    public record GetCamposQuery(int? id) : IRequest<IEnumerable<CampoDTO>>;
 }
