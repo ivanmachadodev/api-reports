@@ -14,17 +14,17 @@
 /API.ReportsEngine/API.ReportsEngine/bin
 /API.ReportsEngine/API.ReportsEngine/obj
 
-/API.MicroserviceExample1/Domain/bin
-/API.MicroserviceExample1/Domain/obj
+/API.MicroservicioExample1/Domain/bin
+/API.MicroservicioExample1/Domain/obj
 
-/API.MicroserviceExample1/Application/bin
-/API.MicroserviceExample1/Application/obj
+/API.MicroservicioExample1/Application/bin
+/API.MicroservicioExample1/Application/obj
 
-/API.MicroserviceExample1/Infrastructure/bin
-/API.MicroserviceExample1/Infrastructure/obj
+/API.MicroservicioExample1/Infrastructure/bin
+/API.MicroservicioExample1/Infrastructure/obj
 
-/API.MicroserviceExample1/MicroservicioExample1/bin
-/API.MicroserviceExample1/MicroservicioExample1/obj
+/API.MicroservicioExample1/MicroservicioExample1/bin
+/API.MicroservicioExample1/MicroservicioExample1/obj
 
 /API.MicroserviceExample2/API.Domain/bin
 /API.MicroserviceExample2/API.Domain/obj
@@ -38,7 +38,7 @@
 /API.MicroserviceExample2/API.MicroserviceExample2/bin
 /API.MicroserviceExample2/API.MicroserviceExample2/obj
 
-/API.MicroserviceExample1/.vs
+/API.MicroservicioExample1/.vs
 /API.MicroserviceExample2/.vs
 
 
