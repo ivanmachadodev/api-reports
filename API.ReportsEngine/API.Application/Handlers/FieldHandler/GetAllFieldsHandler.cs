@@ -1,5 +1,5 @@
 ﻿using API.Application.DTOs;
-using API.Application.Queries.CampoQueries;
+using API.Application.Queries.FieldQueries;
 using API.Infrastructure.Contracts;
 using MediatR;
 
@@ -19,7 +19,7 @@ namespace API.Application.Handlers.FieldHandler
         {
             var fieldsDTOs = new List<FieldDTO>();
             var fields = await _fieldRepository.GetAllFieldsAsync();
-            foreach (var field in fieldsDTOs)
+            foreach (var field in fields)
             {
                 fieldsDTOs.Add(new FieldDTO
                 {

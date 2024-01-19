@@ -1,15 +1,10 @@
 ﻿using API.Application.Commands.AreaCommands;
 using API.Infrastructure.Contracts;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Application.Handlers.AreaHandlers
 {
-    public class DeleteAreaHandler
+    public class DeleteAreaHandler : IRequestHandler<DeleteAreaCommand>
     {
         private readonly IAreaRepository _areaRepository;
 

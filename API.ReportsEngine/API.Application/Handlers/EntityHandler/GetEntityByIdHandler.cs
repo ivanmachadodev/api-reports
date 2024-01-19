@@ -1,11 +1,11 @@
 ﻿using API.Application.DTOs;
-using API.Application.Queries.EntidadQueries;
+using API.Application.Queries.EntityQueries;
 using API.Infrastructure.Contracts;
 using MediatR;
 
 namespace API.Application.Handlers.EntityHandler
 {
-    public class GetEntityByIdHandler : IRequest<IEnumerable<EntityDTO>>
+    public class GetEntityByIdHandler : IRequestHandler<GetEntityByIdQuery, IEnumerable<EntityDTO>>
     {
         public readonly IEntityRepository _entityRepository;
 

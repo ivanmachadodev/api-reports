@@ -1,5 +1,5 @@
 ﻿using API.Application.DTOs;
-using API.Application.Queries.EntidadQueries;
+using API.Application.Queries.EntityQueries;
 using API.Infrastructure.Contracts;
 using MediatR;
 

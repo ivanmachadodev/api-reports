@@ -1,10 +1,11 @@
-﻿using API.Application.Commands.FieldCommands;
+﻿using API.Application.Commands.EntityCommands;
 using API.Application.DTOs;
 using API.Infrastructure.Contracts;
+using MediatR;
 
-namespace API.Application.Handlers.EntidadHandler
+namespace API.Application.Handlers.EntityHandler
 {
-    public class UpdateEntityHandler
+    public class UpdateEntityHandler : IRequestHandler<UpdateEntityCommand, EntityDTO>
     {
         private readonly IEntityRepository _entityRepository;
 
@@ -13,7 +14,7 @@ namespace API.Application.Handlers.EntidadHandler
             _entityRepository = entityRepository;
         }
 
-        public async Task<EntityDTO> Handle(UpdateFieldCommand request, CancellationToken cancellationToken)
+        public async Task<EntityDTO> Handle(UpdateEntityCommand request, CancellationToken cancellationToken)
         {
             var entity = await _entityRepository.GetEntityByIdAsync(request.id/*, cancellationToken*/);
 
@@ -23,7 +24,7 @@ namespace API.Application.Handlers.EntidadHandler
             }
 
             entity.Name = request.name;
-            entity.EntityId = request.entityId;
+            entity.AreaId = request.areaId;
 
             await _entityRepository.UpdateEntityAsync(entity, cancellationToken);
 

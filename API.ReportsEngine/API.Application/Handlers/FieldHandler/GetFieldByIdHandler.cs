@@ -1,11 +1,11 @@
 ﻿using API.Application.DTOs;
-using API.Application.Queries.CampoQueries;
+using API.Application.Queries.FieldQueries;
 using API.Infrastructure.Contracts;
 using MediatR;
 
 namespace API.Application.Handlers.FieldHandler
 {
-    public class GetFieldByIdHandler : IRequest<IEnumerable<EntityDTO>>
+    public class GetFieldByIdHandler : IRequestHandler<GetFieldByIdQuery, IEnumerable<FieldDTO>>
     {
         public readonly IFieldRepository _fieldRepository;
 
@@ -16,16 +16,16 @@ namespace API.Application.Handlers.FieldHandler
 
         public async Task<IEnumerable<FieldDTO>> Handle(GetFieldByIdQuery request, CancellationToken cancellationToken)
         {
-            var entitiesDTOs = new List<FieldDTO>();
-            var entity = await _fieldRepository.GetFieldByIdAsync(request.id);
-            entitiesDTOs.Add(new FieldDTO
+            var fieldsDTOs = new List<FieldDTO>();
+            var field = await _fieldRepository.GetFieldByIdAsync(request.id);
+            fieldsDTOs.Add(new FieldDTO
             {
-                FieldId = entity.FieldId,
-                Name = entity.Name,
-                EntityId = entity.EntityId,
+                FieldId = field.FieldId,
+                Name = field.Name,
+                EntityId = field.EntityId,
             });
 
-            return entitiesDTOs;
+            return fieldsDTOs;
         }
     }
 }

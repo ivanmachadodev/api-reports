@@ -1,4 +1,4 @@
-﻿using API.Application.Commands.EntidadCommands;
+﻿using API.Application.Commands.EntityCommands;
 using API.Application.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

@@ -1,5 +1,4 @@
-﻿using API.Application.Commands.CampoCommands;
-using API.Application.Commands.FieldCommands;
+﻿using API.Application.Commands.FieldCommands;
 using API.Application.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

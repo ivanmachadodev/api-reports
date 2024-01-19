@@ -1,10 +1,10 @@
-﻿using API.Application.Commands.EntidadCommands;
+﻿using API.Application.Commands.EntityCommands;
 using API.Infrastructure.Contracts;
 using MediatR;
 
-namespace API.Application.Handlers.EntidadHandler
+namespace API.Application.Handlers.EntityHandler
 {
-    public class DeleteEntityHandler
+    public class DeleteEntityHandler : IRequestHandler<DeleteEntityCommand>
     {
         private readonly IEntityRepository _entityRepository;
 

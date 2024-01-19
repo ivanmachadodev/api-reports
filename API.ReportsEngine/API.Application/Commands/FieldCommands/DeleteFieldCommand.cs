@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace API.Application.Commands.CampoCommands
+namespace API.Application.Commands.FieldCommands
 {
     public record DeleteFieldCommand(int id) : IRequest;
 }

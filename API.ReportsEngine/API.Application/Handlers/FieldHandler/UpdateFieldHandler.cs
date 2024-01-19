@@ -1,10 +1,11 @@
 ﻿using API.Application.Commands.FieldCommands;
 using API.Application.DTOs;
 using API.Infrastructure.Contracts;
+using MediatR;
 
 namespace API.Application.Handlers.FieldHandler
 {
-    public class UpdateFieldHandler
+    public class UpdateFieldHandler : IRequestHandler<UpdateFieldCommand, FieldDTO>
     {
         private readonly IFieldRepository _fieldRepository;
 

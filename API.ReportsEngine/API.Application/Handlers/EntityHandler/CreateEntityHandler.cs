@@ -1,10 +1,10 @@
-﻿using API.Application.Commands.EntidadCommands;
+﻿using API.Application.Commands.EntityCommands;
 using API.Application.DTOs;
 using API.Domain.Entities;
 using API.Infrastructure.Contracts;
 using MediatR;
 
-namespace API.Application.Handlers.EntidadHandler
+namespace API.Application.Handlers.EntityHandler
 {
     public class CreateFieldHandler : IRequestHandler<CreateEntityCommand, EntityDTO>
     {

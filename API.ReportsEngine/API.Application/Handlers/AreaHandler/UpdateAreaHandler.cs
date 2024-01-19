@@ -1,10 +1,11 @@
 ﻿using API.Application.Commands.AreaCommands;
 using API.Application.DTOs;
 using API.Infrastructure.Contracts;
+using MediatR;
 
 namespace API.Application.Handlers.AreaHandlers
 {
-    public class UpdateAreaHandler
+    public class UpdateAreaHandler : IRequestHandler<UpdateAreaCommand, AreaDTO>
     {
         private readonly IAreaRepository _areaRepository;
 

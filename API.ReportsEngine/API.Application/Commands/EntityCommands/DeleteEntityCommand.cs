@@ -1,11 +1,6 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace API.Application.Commands.EntidadCommands
+namespace API.Application.Commands.EntityCommands
 {
     public record DeleteEntityCommand(int id) : IRequest;
 }
