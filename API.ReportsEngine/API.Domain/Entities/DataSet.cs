@@ -1,3 +1,5 @@
+
+﻿namespace API.Domain.Entities
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace API.Domain.Entities
@@ -8,7 +10,7 @@ namespace API.Domain.Entities
         public int DataSetId { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
-
-        public ICollection<DetFieldsOfDataSet> DetFieldsOfDataSets { get; set; }
+        public string Description { get; set; }
+        public IEnumerable<DetFieldsOfDataSet> DetFieldsOfDataSets { get; set; }
     }
 }

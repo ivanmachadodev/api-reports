@@ -19,14 +19,14 @@ namespace API.ReportsEngine.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<AreaDTO>> CreateItem(CreateAreaCommand command)
+        public async Task<ActionResult<AreaDTO>> CreateArea(CreateAreaCommand command)
         {
             var area = await _mediator.Send(command);
             return Ok(area);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<AreaDTO>> UpdateItem(int id, UpdateAreaCommand command)
+        public async Task<ActionResult<AreaDTO>> UpdateArea(int id, UpdateAreaCommand command)
         {
             if (id != command.Id)
             {
@@ -44,7 +44,7 @@ namespace API.ReportsEngine.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteItem(int id)
+        public async Task<IActionResult> DeleteArea(int id)
         {
             await _mediator.Send(new DeleteAreaCommand(id));
             return NoContent();
