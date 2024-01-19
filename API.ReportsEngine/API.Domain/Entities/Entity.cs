@@ -10,8 +10,7 @@ namespace API.Domain.Entities
         public int AreaId { get; set; }
 
         public Area Area { get; set; }
-
-
+      
         public IEnumerable<Field> Fields { get; set; }
 
     }
