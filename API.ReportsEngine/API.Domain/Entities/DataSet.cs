@@ -9,7 +9,7 @@ namespace API.Domain.Entities
         public string Code { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-      
+
         public IEnumerable<DetFieldsOfDataSet> DetFieldsOfDataSets { get; set; }
     }
 }
