@@ -1,5 +1,5 @@
 ﻿using API.Application.DTOs;
-using API.Application.Queries.AreaQueries;
+using API.Application.Queries.EntityQueries;
 using HotChocolate;
 using HotChocolate.Types;
 using MediatR;
@@ -7,18 +7,18 @@ using MediatR;
 namespace API.ReportsEngine.QueriesControllers
 {
     [ExtendObjectType("Query")]
-    public class AreaQueryController
+    public class EntityQueryController
     {
-        public async Task<IEnumerable<AreaDTO>> GetAreas([Service] IMediator mediator, int? id)
+        public async Task<IEnumerable<EntityDTO>> GetEntities([Service] IMediator mediator, int? id)
         {
             if (id.HasValue)
             {
-                var query = new GetAreaByIdQuery(id.Value);
+                var query = new GetEntityByIdQuery(id.Value);
                 return await mediator.Send(query);
             }
             else
             {
-                var query = new GetAllAreasQuery();
+                var query = new GetAllEntityQuery();
                 return await mediator.Send(query);
             }
         }

@@ -3,6 +3,7 @@ using API.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Infrastructure.Migrations
 {
     [DbContext(typeof(ReportsEngineContext))]
-    partial class ReportsEngineContextModelSnapshot : ModelSnapshot
+    [Migration("20240118193630_ALTER_TABLES_Entidades_Campos_DataSets_DetCamposDelDataSet")]
+    partial class ALTER_TABLES_Entidades_Campos_DataSets_DetCamposDelDataSet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,11 +80,11 @@ namespace API.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DataSetId"));
 
-                    b.Property<string>("Code")
+                    b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -92,35 +95,35 @@ namespace API.Infrastructure.Migrations
 
             modelBuilder.Entity("API.Domain.Entities.DetFieldsOfDataSet", b =>
                 {
-                    b.Property<int>("DetFieldsOfDataSetId")
+                    b.Property<int>("DetCamposDeDataSetId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DetFieldsOfDataSetId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DetCamposDeDataSetId"));
+
+                    b.Property<int>("CampoId")
+                        .HasColumnType("int");
 
                     b.Property<int>("DataSetId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FieldId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Filter")
+                    b.Property<string>("Filtro")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FilterType")
+                    b.Property<string>("Orden")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Order")
+                    b.Property<string>("TipoFiltro")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("DetFieldsOfDataSetId");
+                    b.HasKey("DetCamposDeDataSetId");
+
+                    b.HasIndex("CampoId");
 
                     b.HasIndex("DataSetId");
-
-                    b.HasIndex("FieldId");
 
                     b.ToTable("DetFieldsOfDataSet");
                 });
@@ -149,43 +152,43 @@ namespace API.Infrastructure.Migrations
 
             modelBuilder.Entity("API.Domain.Entities.Field", b =>
                 {
-                    b.Property<int>("FieldId")
+                    b.Property<int>("CampoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FieldId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CampoId"));
 
-                    b.Property<int>("EntityId")
+                    b.Property<int>("EntidadId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("FieldId");
+                    b.HasKey("CampoId");
 
-                    b.HasIndex("EntityId");
+                    b.HasIndex("EntidadId");
 
                     b.ToTable("Fields");
                 });
 
             modelBuilder.Entity("API.Domain.Entities.DetFieldsOfDataSet", b =>
                 {
+                    b.HasOne("API.Domain.Entities.Field", "Campo")
+                        .WithMany()
+                        .HasForeignKey("CampoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("API.Domain.Entities.DataSet", "DataSet")
-                        .WithMany("DetFieldsOfDataSets")
+                        .WithMany("DetCamposDeDataSets")
                         .HasForeignKey("DataSetId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("API.Domain.Entities.Field", "Field")
-                        .WithMany()
-                        .HasForeignKey("FieldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Campo");
 
                     b.Navigation("DataSet");
-
-                    b.Navigation("Field");
                 });
 
             modelBuilder.Entity("API.Domain.Entities.Entity", b =>
@@ -201,13 +204,13 @@ namespace API.Infrastructure.Migrations
 
             modelBuilder.Entity("API.Domain.Entities.Field", b =>
                 {
-                    b.HasOne("API.Domain.Entities.Entity", "Entity")
+                    b.HasOne("API.Domain.Entities.Entity", "Entidad")
                         .WithMany("Fields")
-                        .HasForeignKey("EntityId")
+                        .HasForeignKey("EntidadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Entity");
+                    b.Navigation("Entidad");
                 });
 
             modelBuilder.Entity("API.Domain.Entities.Area", b =>
@@ -217,7 +220,7 @@ namespace API.Infrastructure.Migrations
 
             modelBuilder.Entity("API.Domain.Entities.DataSet", b =>
                 {
-                    b.Navigation("DetFieldsOfDataSets");
+                    b.Navigation("DetCamposDeDataSets");
                 });
 
             modelBuilder.Entity("API.Domain.Entities.Entity", b =>

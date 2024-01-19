@@ -18,15 +18,17 @@ builder.Services.AddSwaggerGen();
 builder.Services
        .AddGraphQLServer()
        .AddQueryType(d => d.Name("Query"))
+       .AddType<FieldQueryController>()
+       .AddType<EntityQueryController>()
        .AddType<AreaQueryController>()
        .AddType<CamposDBsQueryController>()
        .AddMutationType<DataSetMutationController>();
 
 //Add Scopeds
-builder.Services.AddScoped<ICamposDBsRepository, CamposDBsRepository>();
+builder.Services.AddScoped<IDBFieldsBModelRepository, DBFieldsBModelRepository>();
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();
-builder.Services.AddScoped<IEntidadRepository, EntidadRepository>();
-builder.Services.AddScoped<ICampoRepository, CampoRepository>();
+builder.Services.AddScoped<IEntityRepository, EntityRepository>();
+builder.Services.AddScoped<IFieldRepository, FieldRepository>();
 
 //Add Cors
 builder.Services.AddCors(options =>

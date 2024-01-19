@@ -2,12 +2,14 @@
 
 namespace API.Domain.Entities
 {
-    public class Area
+    public class Field
     {
         [Key]
-        public int AreaId { get; set; }
+        public int FieldId { get; set; }
         public string Name { get; set; }
+        public int EntityId { get; set; }
 
-        public ICollection<Entity> Entities { get; set; }
+        public Entity Entity { get; set; }
+
     }
 }

@@ -9,9 +9,11 @@ namespace API.Infrastructure
         public ReportsEngineContext(DbContextOptions<ReportsEngineContext> options) : base(options) { }
 
         public DbSet<Area> Areas { get; set; }
-        public DbSet<Entidad> Entidades { get; set; }
-        public DbSet<Campo> Campos { get; set; }
-        public DbSet<CampoDBs> CamposDBs { get; set; }
+        public DbSet<Entity> Entities { get; set; }
+        public DbSet<Field> Fields { get; set; }
+        public DbSet<DBFieldsBModel> DBFieldsBModel { get; set; }
+        public DbSet<DataSet> DataSets { get; set; }
+        public DbSet<DetFieldsOfDataSet> DetFieldsOfDataSet { get; set; }
 
     }
 }
