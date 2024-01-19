@@ -8,6 +8,6 @@ namespace API.Domain.Entities
         public int AreaId { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Entity> Entities { get; set; }
+        public IEnumerable<Entity> Entities { get; set; }
     }
 }

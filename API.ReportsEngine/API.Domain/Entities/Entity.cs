@@ -12,7 +12,7 @@ namespace API.Domain.Entities
         public Area Area { get; set; }
 
 
-        public ICollection<Field> Fields { get; set; }
+        public IEnumerable<Field> Fields { get; set; }
 
     }
 }
