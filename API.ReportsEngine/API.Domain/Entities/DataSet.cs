@@ -1,4 +1,6 @@
-﻿namespace API.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace API.Domain.Entities
 {
     public class DataSet
     {
