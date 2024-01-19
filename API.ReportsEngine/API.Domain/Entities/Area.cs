@@ -7,6 +7,7 @@ namespace API.Domain.Entities
         [Key]
         public int AreaId { get; set; }
         public string Name { get; set; }
+      
         public IEnumerable<Entity> Entities { get; set; }
     }
 }
