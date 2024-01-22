@@ -15,12 +15,12 @@ namespace API.Infrastructure.Repositories
 
         public async Task<IEnumerable<DataSet>> GetAllDataSetsAsync()
         {
-            return await _context.DataSets.ToListAsync();
+            return await _context.DataSets.Include(x => x.DetFieldsOfDataSets).ToListAsync();
         }
 
         public async Task<DataSet?> GetDataSetByIdAsync(int? id)
         {
-            return await _context.DataSets.FirstOrDefaultAsync(p => p.DataSetId == id);
+            return await _context.DataSets.Include(x => x.DetFieldsOfDataSets).FirstOrDefaultAsync(p => p.DataSetId == id);
         }
 
         public async Task SaveDataSetAsync(DataSet dataSet, CancellationToken cancellationToken)
