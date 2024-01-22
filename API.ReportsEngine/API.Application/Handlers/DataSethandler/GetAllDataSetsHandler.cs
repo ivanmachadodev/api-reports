@@ -20,12 +20,27 @@ namespace API.Application.Handlers.DataSethandler
             var dataSets = await _dataSetRepository.GetAllDataSetsAsync();
             foreach (var dataSet in dataSets)
             {
+                var detFieldsDTO = new List<DetFieldsOfDataSetDTO>();
+                foreach (var field in dataSet.DetFieldsOfDataSets)
+                {
+                    detFieldsDTO.Add(new DetFieldsOfDataSetDTO
+                    {
+                        DataSetId = field.DataSetId,
+                        DetFieldsOfDataSetId = field.DataSetId,
+                        FieldId = field.FieldId,
+                        Filter = field.Filter,
+                        FilterType = field.FilterType,
+                        Order = field.Order,
+                    });
+                }
+
                 dataSetsDTOs.Add(new DataSetDTO
                 {
                     DataSetId = dataSet.DataSetId,
                     Code = dataSet.Code,
                     Name = dataSet.Name,
-                    Description = dataSet.Description
+                    Description = dataSet.Description,
+                    DetFieldsOfDataSets = detFieldsDTO
                 });
             }
 
