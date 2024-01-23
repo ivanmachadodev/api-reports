@@ -1,6 +1,8 @@
+using API.Domain.Entities;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
 using API.Infrastructure.Repositories;
+using API.ReportsEngine.Controllers;
 using API.ReportsEngine.QueriesControllers;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +26,8 @@ builder.Services
        .AddType<CamposDBsQueryController>()
        .AddType<DataSetQueryController>()
        .AddType<DetFieldsOFDataSetQueryController>()
-       .AddMutationType<DataSetMutationController>();
+       .AddMutationType<DataSetMutationController>()
+       .AddType<MonedaQueryController>();
 
 //Add Scopeds
 builder.Services.AddScoped<IDBFieldsBModelRepository, DBFieldsBModelRepository>();
@@ -33,6 +36,7 @@ builder.Services.AddScoped<IEntityRepository, EntityRepository>();
 builder.Services.AddScoped<IFieldRepository, FieldRepository>();
 builder.Services.AddScoped<IDataSetRepository, DataSetRepository>();
 builder.Services.AddScoped<IDetFieldsOfDataSetRepository, DetFieldsOfDataSetRepository>();
+builder.Services.AddScoped<IMonedaRepository, MonedaRepository>();
 
 //Add Cors
 builder.Services.AddCors(options =>
