@@ -24,7 +24,7 @@ namespace API.Application.Handlers.DataSethandler
             {
                 return Enumerable.Empty<DataSetDTO>();
             }
-
+            
             var detFieldsDTO = new List<DetFieldsOfDataSetDTO>();
             foreach (var field in dataSet.DetFieldsOfDataSets)
             {
