@@ -5,11 +5,12 @@ using API.Application.DTOs;
 using API.Application.Handlers.AreaHandlers;
 using API.Domain.Entities;
 using API.Infrastructure.Contracts;
+using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class CreateAreaHandlerTests
 {
-
-    #region Exito
     [Fact]
     public async Task Handle_ValidCommand_ReturnsAreaDTO()
     {

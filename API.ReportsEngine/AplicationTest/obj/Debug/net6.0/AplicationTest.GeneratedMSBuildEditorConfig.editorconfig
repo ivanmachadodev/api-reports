@@ -8,4 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AplicationTest
+<<<<<<< HEAD
 build_property.ProjectDir = C:\ProyectosOversoft\api-reports\API.ReportsEngine\AplicationTest\
+=======
+build_property.ProjectDir = C:\Users\jesus.colmenares\Desktop\api-reports\API.ReportsEngine\AplicationTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5

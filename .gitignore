@@ -46,3 +46,6 @@ API.MicroservicioExample1/.vs/API.MicroservicioExample1/DesignTimeBuild/.dtbcach
 /API.ReportsEngine/.vs
 /API.MicroservicioExample1/.vs/API.MicroservicioExample1/FileContentIndex
 
+*.dll
+/bin/
+

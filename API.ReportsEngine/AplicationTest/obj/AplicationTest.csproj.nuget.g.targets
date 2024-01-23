@@ -5,7 +5,10 @@
     <Import Project="$(NuGetPackageRoot)system.text.json\6.0.7\buildTransitive\netcoreapp3.1\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.7\buildTransitive\netcoreapp3.1\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.5.0\build\netstandard2.0\Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.5.0\build\netstandard2.0\Microsoft.CodeCoverage.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.5.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.5.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.targets')" />
+<<<<<<< HEAD
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions\7.0.0\buildTransitive\net6.0\Microsoft.Extensions.Logging.Abstractions.targets')" />
+=======
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
     <Import Project="$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets" Condition="Exists('$(NuGetPackageRoot)coverlet.collector\3.2.0\build\netstandard1.0\coverlet.collector.targets')" />
   </ImportGroup>
 </Project>

@@ -2,6 +2,7 @@
 using API.Infrastructure.Contracts;
 using HotChocolate;
 using HotChocolate.Types;
+using static API.ReportsEngine.QueriesControllers.DataSetMutationController;
 
 namespace API.ReportsEngine.QueriesControllers
 {
@@ -32,6 +33,54 @@ namespace API.ReportsEngine.QueriesControllers
             {
                 return listaCamposDBs;
             }
+
+        }
+        public Dataset GetDatasets(int? id)
+        {
+            // Llenar la lista con 5 elementos de ejemplo
+            var datasets = new List<Dataset>();
+            for (int i = 1; i <= 5; i++)
+            {
+                datasets.Add(new Dataset
+                {
+                    ID = i,
+                    Name = $"Dataset {i}",
+                    Code = $"D{i}",
+                    Description = $"Descripción del Dataset {i}",
+                    DetailFields = new List<DatasetDetailFields>
+            {
+                new DatasetDetailFields
+                {
+                    ID = i,
+                    FieldID = i * 10 + 101,
+                    FieldName = $"Field{i * 10 + 1}",
+                    EntityID = i * 10 + 201,
+                    EntityName = $"Entity{i * 10 + 1}",
+                    AreaID = i * 10 + 301,
+                    AreaName = $"Area{i * 10 + 1}",
+                    Filter = $"soy un filtro",
+                    FilterType = $"different",
+                    Order = $"ascending"
+                },
+                new DatasetDetailFields
+                {
+                    ID = i + 1,
+                    FieldID = i * 10 + 102,
+                    FieldName = $"Field{i * 10 + 2}",
+                    EntityID = i * 10 + 202,
+                    EntityName = $"Entity{i * 10 + 2}",
+                    AreaID = i * 10 + 302,
+                    AreaName = $"Area{i * 10 + 2}",
+                    Filter = $"1000000",
+                    FilterType = $"begins with",
+                    Order = $"descending"
+                }
+            }
+                });
+            }
+
+            var datasetEncontrado = datasets.FirstOrDefault(x => x.ID == id);
+            return datasetEncontrado;
         }
     }
 }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj",
         "packagesPath": "C:\\Users\\sebastian.katzman\\.nuget\\packages\\",
         "outputPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Application\\obj\\",
+=======
+    "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj",
+        "projectName": "API.Application",
+        "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj",
+        "packagesPath": "C:\\Users\\jesus.colmenares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\obj\\",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\sebastian.katzman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\jesus.colmenares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -34,8 +52,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj": {
                 "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj"
+=======
+              "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
               }
             }
           }
@@ -60,7 +83,15 @@
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[11.1.0, )"
+=======
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
             }
           },
           "imports": [
@@ -79,6 +110,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
@@ -91,12 +123,30 @@
         "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj",
         "packagesPath": "C:\\Users\\sebastian.katzman\\.nuget\\packages\\",
         "outputPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Domain\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj",
+        "projectName": "API.Domain",
+        "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj",
+        "packagesPath": "C:\\Users\\jesus.colmenares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\obj\\",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\sebastian.katzman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\jesus.colmenares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -140,6 +190,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
@@ -152,12 +203,30 @@
         "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\sebastian.katzman\\.nuget\\packages\\",
         "outputPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj",
+        "projectName": "API.Infrastructure",
+        "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\jesus.colmenares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\obj\\",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\sebastian.katzman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\jesus.colmenares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -174,8 +243,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj": {
                 "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj"
+=======
+              "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj": {
+                "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Domain\\API.Domain.csproj"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
               }
             }
           }
@@ -194,17 +268,29 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[7.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+=======
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[7.0.14, )"
+=======
+              "version": "[6.0.8, )"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
             }
           },
           "imports": [
@@ -223,6 +309,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
@@ -235,12 +322,30 @@
         "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj",
         "packagesPath": "C:\\Users\\sebastian.katzman\\.nuget\\packages\\",
         "outputPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\AplicationTest\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj",
+        "projectName": "AplicationTest",
+        "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\AplicationTest\\AplicationTest.csproj",
+        "packagesPath": "C:\\Users\\jesus.colmenares\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\AplicationTest\\obj\\",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\sebastian.katzman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\jesus.colmenares\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -257,11 +362,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj": {
                 "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj"
               },
               "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj": {
                 "projectPath": "C:\\ProyectosOversoft\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj"
+=======
+              "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj": {
+                "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Application\\API.Application.csproj"
+              },
+              "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jesus.colmenares\\Desktop\\api-reports\\API.ReportsEngine\\API.Infrastructure\\API.Infrastructure.csproj"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
               }
             }
           }
@@ -317,7 +430,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> f7e41603ae61a862fc6f23f7a59af0b15ebb7af5
         }
       }
     }

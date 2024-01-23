@@ -1,6 +1,5 @@
 ﻿using API.Application.DTOs;
 using API.Application.Queries.DataSetQueries;
-using API.Application.Queries.DetFieldsOfDataSetQueries;
 using API.Infrastructure.Contracts;
 using MediatR;
 
@@ -21,12 +20,23 @@ namespace API.Application.Handlers.DataSethandler
         {
             var dataSet = await _dataSetRepository.GetDataSetByIdAsync(request.id);
 
-            var detFieldsOfDataSetQuery = new GetAllDetFieldsOfDataSetQuery(request.id);
-            var detFieldsOfDataSetDTOs = await _mediator.Send(detFieldsOfDataSetQuery);
-
             if (dataSet == null)
             {
                 return Enumerable.Empty<DataSetDTO>();
+            }
+            
+            var detFieldsDTO = new List<DetFieldsOfDataSetDTO>();
+            foreach (var field in dataSet.DetFieldsOfDataSets)
+            {
+                detFieldsDTO.Add(new DetFieldsOfDataSetDTO
+                {
+                    DataSetId = field.DataSetId,
+                    DetFieldsOfDataSetId = field.DataSetId,
+                    FieldId = field.FieldId,
+                    Filter = field.Filter,
+                    FilterType = field.FilterType,
+                    Order = field.Order,
+                });
             }
 
             var dataSetsDTOs = new List<DataSetDTO>
@@ -37,7 +47,7 @@ namespace API.Application.Handlers.DataSethandler
                     Code = dataSet.Code,
                     Name = dataSet.Name,
                     Description = dataSet.Description,
-                    DetFieldsOfDataSets = detFieldsOfDataSetDTOs
+                    DetFieldsOfDataSets = detFieldsDTO
                 }
             };
 

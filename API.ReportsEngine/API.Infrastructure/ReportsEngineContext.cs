@@ -14,6 +14,6 @@ namespace API.Infrastructure
         public DbSet<DBFieldsBModel> DBFieldsBModel { get; set; }
         public DbSet<DataSet> DataSets { get; set; }
         public DbSet<DetFieldsOfDataSet> DetFieldsOfDataSet { get; set; }
-
+        public DbSet<Moneda> FormaTrabajos { get; set; }
     }
 }
