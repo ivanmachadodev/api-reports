@@ -58,7 +58,8 @@ namespace API.ReportsEngine.QueriesControllers
                     EntityName = $"Entity{i * 10 + 1}",
                     AreaID = i * 10 + 301,
                     AreaName = $"Area{i * 10 + 1}",
-                    Filter = $"different",
+                    Filter = $"soy un filtro",
+                    FilterType = $"different",
                     Order = $"ascending"
                 },
                 new DatasetDetailFields
@@ -70,7 +71,8 @@ namespace API.ReportsEngine.QueriesControllers
                     EntityName = $"Entity{i * 10 + 2}",
                     AreaID = i * 10 + 302,
                     AreaName = $"Area{i * 10 + 2}",
-                    Filter = $"begins with",
+                    Filter = $"1000000",
+                    FilterType = $"begins with",
                     Order = $"descending"
                 }
             }
