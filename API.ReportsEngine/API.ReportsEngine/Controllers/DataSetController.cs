@@ -21,9 +21,23 @@ namespace API.ReportsEngine.Controllers
         [HttpPost]
         public async Task<ActionResult<DataSetDTO>> CreateDataSet(CreateDataSetCommand command)
         {
-            var dataSet = await _mediator.Send(command);
-            return Ok(dataSet);
+            DataSetDTO dataSetDTO = new DataSetDTO();
+            if (command.dataSetId == 0)
+            {
+                var createCommand = new CreateDataSetCommand(command.dataSetId, command.code, command.name, command.description, command.detFieldOfDataSet);
+                dataSetDTO = await _mediator.Send(createCommand);
+
+            }
+            else
+            {
+                var updateCommand = new UpdateDataSetCommand(command.dataSetId, command.code, command.name, command.description, command.detFieldOfDataSet);
+                dataSetDTO = await _mediator.Send(updateCommand);
+
+            }
+            return Ok(dataSetDTO);
         }
+
+        /*
 
         [HttpPut("{id}")]
         public async Task<ActionResult<DataSetDTO>> UpdateDataSet(int id, UpdateDataSetCommand command)
@@ -42,6 +56,7 @@ namespace API.ReportsEngine.Controllers
 
             return Ok(updatedDataSet);
         }
+        */
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDataSet(int id)

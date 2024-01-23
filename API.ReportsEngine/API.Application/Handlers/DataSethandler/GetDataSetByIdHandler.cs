@@ -24,11 +24,7 @@ namespace API.Application.Handlers.DataSethandler
             {
                 return Enumerable.Empty<DataSetDTO>();
             }
-
-            /*
-            var detFieldsOfDataSetQuery = new GetAllDetFieldsOfDataSetQuery(request.id);
-            var detFieldsOfDataSetDTOs = await _mediator.Send(detFieldsOfDataSetQuery);
-            */
+            
             var detFieldsDTO = new List<DetFieldsOfDataSetDTO>();
             foreach (var field in dataSet.DetFieldsOfDataSets)
             {
