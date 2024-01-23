@@ -29,6 +29,7 @@ namespace API.ReportsEngine.QueriesControllers
             public int AreaID { get; set; }
             public string AreaName { get; set; }
             public string Filter { get; set;}
+            public string FilterType { get; set; }
             public string Order { get; set; }
         }
 
@@ -50,6 +51,7 @@ namespace API.ReportsEngine.QueriesControllers
                     AreaID = fieldInput.AreaID,
                     AreaName = fieldInput.AreaName,
                     Filter = fieldInput.Filter,
+                    FilterType = fieldInput.FilterType,
                     Order = fieldInput.Order
                 }).ToList(),
             };
