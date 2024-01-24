@@ -5,20 +5,20 @@ using API.Domain.Entities;
 using API.Infrastructure.Contracts;
 using MediatR;
 
-namespace API.Application.Handlers.DataSethandler
+namespace API.Application.Services.DataSetServices
 {
-    public class CreateDataSetHandler : IRequestHandler<CreateDataSetCommand, DataSetDTO>
+    public class CreateDataSetService : ICreateDataSetService
     {
         public readonly IDataSetRepository _dataSetRepository;
         public readonly IMediator _mediator;
 
-        public CreateDataSetHandler(IDataSetRepository dataSetRepository, IMediator mediator)
+        public CreateDataSetService(IDataSetRepository dataSetRepository, IMediator mediator)
         {
             _dataSetRepository = dataSetRepository;
             _mediator = mediator;
         }
 
-        public async Task<DataSetDTO> Handle(CreateDataSetCommand request, CancellationToken cancellationToken)
+        public async Task<DataSetDTO> CreateDataSet(RegisterDataSetCommand request, CancellationToken cancellationToken)
         {
             var dataSet = new DataSet
             {
@@ -26,7 +26,6 @@ namespace API.Application.Handlers.DataSethandler
                 Name = request.name,
                 Description = request.description,
             };
-
             await _dataSetRepository.SaveDataSetAsync(dataSet, cancellationToken);
 
             var createDetFieldsofDataSetQuery = new CreateDetFieldsOfDataSetCommand(request.detFieldOfDataSet, dataSet.DataSetId);

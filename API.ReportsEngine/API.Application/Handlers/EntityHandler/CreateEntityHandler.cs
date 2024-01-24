@@ -17,6 +17,12 @@ namespace API.Application.Handlers.EntityHandler
 
         public async Task<EntityDTO> Handle(CreateEntityCommand request, CancellationToken cancellationToken)
         {
+            var entityExists = await _entityRepository.GetEntityExistsAsync(request.areaId, request.name);
+            if (entityExists != null)
+            {
+                return new EntityDTO { EntityId = entityExists.EntityId, Name = entityExists.Name, AreaId = entityExists.AreaId };
+            }
+
             var entity = new Entity
             {
                 Name = request.name,

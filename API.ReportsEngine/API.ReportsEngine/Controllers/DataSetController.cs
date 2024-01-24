@@ -19,22 +19,10 @@ namespace API.ReportsEngine.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<DataSetDTO>> CreateDataSet(CreateDataSetCommand command)
+        public async Task<ActionResult<DataSetDTO>> CreateDataSet(RegisterDataSetCommand command)
         {
-            DataSetDTO dataSetDTO = new DataSetDTO();
-            if (command.dataSetId == 0)
-            {
-                var createCommand = new CreateDataSetCommand(command.dataSetId, command.code, command.name, command.description, command.detFieldOfDataSet);
-                dataSetDTO = await _mediator.Send(createCommand);
-
-            }
-            else
-            {
-                var updateCommand = new UpdateDataSetCommand(command.dataSetId, command.code, command.name, command.description, command.detFieldOfDataSet);
-                dataSetDTO = await _mediator.Send(updateCommand);
-
-            }
-            return Ok(dataSetDTO);
+            var dataSet = await _mediator.Send(command);
+            return Ok(dataSet);
         }
 
         /*

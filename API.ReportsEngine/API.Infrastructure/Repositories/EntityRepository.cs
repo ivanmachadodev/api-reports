@@ -15,7 +15,12 @@ namespace API.Infrastructure.Repositories
 
         public async Task<Entity?> GetEntityByIdAsync(int? id)
         {
-            return await _context.Entities.FirstOrDefaultAsync(p => p.AreaId == id);
+            return await _context.Entities.FirstOrDefaultAsync(p => p.EntityId == id);
+        }
+
+        public async Task<Entity?> GetEntityExistsAsync(int? areaId, string name)
+        {
+            return await _context.Entities.FirstOrDefaultAsync(p => p.AreaId == areaId && p.Name == name);
         }
 
         public async Task<IEnumerable<Entity>> GetAllEntitiesAsync()

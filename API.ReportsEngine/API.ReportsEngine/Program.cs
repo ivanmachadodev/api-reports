@@ -1,3 +1,4 @@
+using API.Application.Services.DataSetServices;
 using API.Infrastructure;
 using API.Infrastructure.Contracts;
 using API.Infrastructure.Repositories;
@@ -32,6 +33,8 @@ builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<IEntityRepository, EntityRepository>();
 builder.Services.AddScoped<IFieldRepository, FieldRepository>();
 builder.Services.AddScoped<IDataSetRepository, DataSetRepository>();
+builder.Services.AddScoped<ICreateDataSetService, CreateDataSetService>();
+builder.Services.AddScoped<IUpdateDataSetService, UpdateDataSetService>();
 builder.Services.AddScoped<IDetFieldsOfDataSetRepository, DetFieldsOfDataSetRepository>();
 
 //Add Cors

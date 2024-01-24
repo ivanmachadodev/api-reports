@@ -18,6 +18,12 @@ namespace API.Application.Handlers.FieldHandler
 
         public async Task<FieldDTO> Handle(CreateFieldCommand request, CancellationToken cancellationToken)
         {
+            //var fieldExists = await _fieldRepository.GetFieldExistsAsync(request.entityId, request.name);
+            //if (fieldExists != null)
+            //{
+            //    return new FieldDTO { FieldId = fieldExists.FieldId, Name = fieldExists.Name, EntityId = fieldExists.EntityId };
+            //}
+
             var field = new Field
             {
                 Name = request.name,

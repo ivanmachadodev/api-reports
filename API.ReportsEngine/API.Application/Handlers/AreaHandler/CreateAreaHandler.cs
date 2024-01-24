@@ -17,6 +17,12 @@ namespace API.Application.Handlers.AreaHandlers
 
         public async Task<AreaDTO> Handle(CreateAreaCommand request, CancellationToken cancellationToken)
         {
+            var areaExists = await _areaRepository.GetAreaByNameAsync(request.name);
+            if (areaExists != null)
+            {
+                return new AreaDTO { AreaId = areaExists.AreaId, Name = areaExists.Name };
+            }
+
             var area = new Area
             {
                 Name = request.name

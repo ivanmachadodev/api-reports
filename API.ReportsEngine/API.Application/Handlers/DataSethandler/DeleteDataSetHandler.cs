@@ -1,10 +1,10 @@
-﻿using API.Application.Commands.AreaCommands;
+﻿using API.Application.Commands.DataSetCommands;
 using API.Infrastructure.Contracts;
 using MediatR;
 
 namespace API.Application.Handlers.DataSethandler
 {
-    public class DeleteDataSetHandler : IRequestHandler<DeleteAreaCommand>
+    public class DeleteDataSetHandler : IRequestHandler<DeleteDataSetCommand>
     {
         public readonly IDataSetRepository _dataSetRepository;
 
@@ -13,9 +13,9 @@ namespace API.Application.Handlers.DataSethandler
             _dataSetRepository = dataSetRepository;
         }
 
-        public async Task<Unit> Handle(DeleteAreaCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteDataSetCommand request, CancellationToken cancellationToken)
         {
-            await _dataSetRepository.DeleteDataSetAsync(request.Id, cancellationToken);
+            await _dataSetRepository.DeleteDataSetAsync(request.id, cancellationToken);
             return Unit.Value;
         }
     }

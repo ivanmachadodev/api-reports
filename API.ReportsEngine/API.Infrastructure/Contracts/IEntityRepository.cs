@@ -5,6 +5,7 @@ namespace API.Infrastructure.Contracts
     public interface IEntityRepository
     {
         Task<Entity?> GetEntityByIdAsync(int? id);
+        Task<Entity?> GetEntityExistsAsync(int? areaId, string name);
 
         Task<IEnumerable<Entity>> GetAllEntitiesAsync();
 

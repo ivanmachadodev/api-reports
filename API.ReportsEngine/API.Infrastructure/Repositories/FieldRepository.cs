@@ -18,6 +18,11 @@ namespace API.Infrastructure.Repositories
             return await _context.Fields.FirstOrDefaultAsync(p => p.FieldId == id);
         }
 
+        //public async Task<Field?> GetFieldByValueAsync(int? entityId, string name)
+        //{
+        //    return await _context.Fields.FirstOrDefaultAsync(p => p.EntityId == entityId && p.Name == name);
+        //}
+
         public async Task<IEnumerable<Field>> GetAllFieldsAsync()
         {
             return await _context.Fields.ToListAsync();

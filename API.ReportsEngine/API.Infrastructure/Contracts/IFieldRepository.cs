@@ -5,6 +5,7 @@ namespace API.Infrastructure.Contracts
     public interface IFieldRepository
     {
         Task<Field?> GetFieldByIdAsync(int? id);
+        //Task<Field?> GetFieldByValueAsync(int? entityId, string name)
 
         Task<IEnumerable<Field>> GetAllFieldsAsync();
 
